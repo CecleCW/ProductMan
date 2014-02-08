@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DFFE0C6-7348-48C1-9512-1BD557EDB6FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProductMan</RootNamespace>
+    <AssemblyName>ProductMan</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>SHUN.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThreadHelper, Version=1.0.1473.24022, Culture=neutral, PublicKeyToken=649a430def9b97d0">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ThreadHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AddressMeta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\RecipientControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\RecipientHelper.cs" />
+    <Compile Include="Components\WaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\XPStyledProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataService.cs" />
+    <Compile Include="Helpers\ResourceHelper.cs" />
+    <Compile Include="Helpers\SerializationHelper.cs" />
+    <Compile Include="Helpers\SQLHelper.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLang\FormLanguageSwitch.cs" />
+    <Compile Include="MultiLang\LanguageCollector.cs" />
+    <Compile Include="NewParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewParameter.Designer.cs">
+      <DependentUpon>NewParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\CaptionPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\CaptionPane.designer.cs">
+      <DependentUpon>CaptionPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\Chart.designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\ChartPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\ChartPane.designer.cs">
+      <DependentUpon>ChartPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\DetailPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\DetailPane.designer.cs">
+      <DependentUpon>DetailPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\FilterPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\FilterPane.designer.cs">
+      <DependentUpon>FilterPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\ProductPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\ProductPane.Designer.cs">
+      <DependentUpon>ProductPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\SearchPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\SearchPane.designer.cs">
+      <DependentUpon>SearchPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\ViewPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\ViewPane.Designer.cs">
+      <DependentUpon>ViewPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterForm.Designer.cs">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patterns\IObserver.cs" />
+    <Compile Include="Patterns\PMSubject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="ProductManContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.zh-CHS.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.zh-CHS.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewParameter.resx">
+      <DependentUpon>NewParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewParameter.zh-CHS.resx">
+      <DependentUpon>NewParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\ChartPane.resx">
+      <DependentUpon>ChartPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\DetailPane.resx">
+      <DependentUpon>DetailPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\FilterPane.resx">
+      <DependentUpon>FilterPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\ProductPane.resx">
+      <DependentUpon>ProductPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\SearchPane.resx">
+      <DependentUpon>SearchPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\ViewPane.resx">
+      <DependentUpon>ViewPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterForm.resx">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterForm.zh-CHS.resx">
+      <DependentUpon>ParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.zh-CHS.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.zh-CHS.resx" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockForm.Designer.cs">
+      <DependentUpon>StockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Utilities\DataProtection.cs" />
+    <Compile Include="Utilities\Formatter.cs" />
+    <Compile Include="Utilities\ILogger.cs" />
+    <Compile Include="Utilities\LoggerBase.cs" />
+    <Compile Include="Win32\CIM_ManagedSystemElement.cs" />
+    <Compile Include="Win32\CIM_System.cs" />
+    <Compile Include="Win32\CIM_UnitaryComputerSystem.cs" />
+    <Compile Include="Win32\ComputerSystem.cs" />
+    <Compile Include="Win32\Crypt32.cs" />
+    <Compile Include="Win32\Kernel32.cs" />
+    <Compile Include="Win32\NetworkConfiguration.cs" />
+    <Compile Include="Win32\OLE32.cs" />
+    <Compile Include="Win32\OperatingSystem.cs" />
+    <Compile Include="Win32\User32.cs" />
+    <Compile Include="WMIVendor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.zh-CHS.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\SplashScreen.jpg" />
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Signin.png" />
+    <EmbeddedResource Include="LoginForm.zh-CHS.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockForm.resx">
+      <DependentUpon>StockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockForm.zh-CHS.resx">
+      <DependentUpon>StockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm.zh-CHS.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="SHUN.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperList\BinaryComponents.SuperList.csproj">
+      <Project>{3BBC852E-2033-4D67-93D9-EE3986304AAE}</Project>
+      <Name>BinaryComponents.SuperList</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperTree\BinaryComponents.SuperTree\BinaryComponents.SuperTree.csproj">
+      <Project>{C022597B-2325-46C1-936D-03C51DD1B048}</Project>
+      <Name>BinaryComponents.SuperTree</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperTree\BinaryComponents.Utility\BinaryComponents.Utility.csproj">
+      <Project>{D3B89D5E-2788-40C7-AD71-128C42216B9E}</Project>
+      <Name>BinaryComponents.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperTree\BinaryComponents.VectorGraphics\BinaryComponents.VectorGraphics.csproj">
+      <Project>{3A8E6317-DEEA-4D6E-8B8D-D4685BC3390B}</Project>
+      <Name>BinaryComponents.VectorGraphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperTree\BinaryComponents.WinFormsGloss\BinaryComponents.WinFormsGloss.csproj">
+      <Project>{4BFF592D-AFBB-4B3B-9050-37E91CFA14ED}</Project>
+      <Name>BinaryComponents.WinFormsGloss</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperTree\BinaryComponents.WinFormsUtility\BinaryComponents.WinFormsUtility.csproj">
+      <Project>{AFF75B02-8754-44C5-9941-458AB013A1AF}</Project>
+      <Name>BinaryComponents.WinFormsUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductMan", "ProductMan\ProductMan.csproj", "{2DFFE0C6-7348-48C1-9512-1BD557EDB6FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.SuperList", "SuperList\BinaryComponents.SuperList.csproj", "{3BBC852E-2033-4D67-93D9-EE3986304AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.SuperTree", "SuperTree\BinaryComponents.SuperTree\BinaryComponents.SuperTree.csproj", "{C022597B-2325-46C1-936D-03C51DD1B048}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.Utility", "SuperTree\BinaryComponents.Utility\BinaryComponents.Utility.csproj", "{D3B89D5E-2788-40C7-AD71-128C42216B9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.VectorGraphics", "SuperTree\BinaryComponents.VectorGraphics\BinaryComponents.VectorGraphics.csproj", "{3A8E6317-DEEA-4D6E-8B8D-D4685BC3390B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.WinFormsGloss", "SuperTree\BinaryComponents.WinFormsGloss\BinaryComponents.WinFormsGloss.csproj", "{4BFF592D-AFBB-4B3B-9050-37E91CFA14ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryComponents.WinFormsUtility", "SuperTree\BinaryComponents.WinFormsUtility\BinaryComponents.WinFormsUtility.csproj", "{AFF75B02-8754-44C5-9941-458AB013A1AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DFFE0C6-7348-48C1-9512-1BD557EDB6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DFFE0C6-7348-48C1-9512-1BD557EDB6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DFFE0C6-7348-48C1-9512-1BD557EDB6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DFFE0C6-7348-48C1-9512-1BD557EDB6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBC852E-2033-4D67-93D9-EE3986304AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C022597B-2325-46C1-936D-03C51DD1B048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C022597B-2325-46C1-936D-03C51DD1B048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C022597B-2325-46C1-936D-03C51DD1B048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C022597B-2325-46C1-936D-03C51DD1B048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B89D5E-2788-40C7-AD71-128C42216B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B89D5E-2788-40C7-AD71-128C42216B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B89D5E-2788-40C7-AD71-128C42216B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B89D5E-2788-40C7-AD71-128C42216B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8E6317-DEEA-4D6E-8B8D-D4685BC3390B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8E6317-DEEA-4D6E-8B8D-D4685BC3390B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8E6317-DEEA-4D6E-8B8D-D4685BC3390B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8E6317-DEEA-4D6E-8B8D-D4685BC3390B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BFF592D-AFBB-4B3B-9050-37E91CFA14ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFF592D-AFBB-4B3B-9050-37E91CFA14ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFF592D-AFBB-4B3B-9050-37E91CFA14ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFF592D-AFBB-4B3B-9050-37E91CFA14ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF75B02-8754-44C5-9941-458AB013A1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF75B02-8754-44C5-9941-458AB013A1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF75B02-8754-44C5-9941-458AB013A1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF75B02-8754-44C5-9941-458AB013A1AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

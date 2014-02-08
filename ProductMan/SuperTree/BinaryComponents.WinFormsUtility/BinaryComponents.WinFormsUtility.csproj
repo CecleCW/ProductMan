@@ -1,0 +1,225 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFF75B02-8754-44C5-9941-458AB013A1AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BinaryComponents.WinFormsUtility</RootNamespace>
+    <AssemblyName>BinaryComponents.WinFormsUtility</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <BaseAddress>15728640</BaseAddress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <BaseAddress>15728640</BaseAddress>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandContextMenuFactory.cs" />
+    <Compile Include="Commands\CommandControlSet.cs" />
+    <Compile Include="Commands\CommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commands\CommandMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commands\CommandMenuStripFactory.cs" />
+    <Compile Include="Commands\CommandToolStripButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commands\CommandToolStripFactory.cs" />
+    <Compile Include="Commands\CommandToolStripMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commands\ICommandControl.cs" />
+    <Compile Include="Commands\KeyCommandLauncher.cs" />
+    <Compile Include="Commands\KeyCommandLauncherFactory.cs" />
+    <Compile Include="Commands\UndoableAction.cs" />
+    <Compile Include="Commands\UndoRedoStack.cs" />
+    <Compile Include="ControlPreferences.cs">
+    </Compile>
+    <Compile Include="ControlSearch.cs" />
+    <Compile Include="Controls\AnimationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AnimationControl.Designer.cs">
+      <DependentUpon>AnimationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BackgroundTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BackgroundTextBox.Designer.cs">
+      <DependentUpon>BackgroundTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlUtils.cs" />
+    <Compile Include="Controls\EnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LocusEffect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PasswordTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ProcessingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProcessingControl.Designer.cs">
+      <DependentUpon>ProcessingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ToolbarAnimationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolbarAnimationControl.Designer.cs">
+      <DependentUpon>ToolbarAnimationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MessageBox.cs" />
+    <Compile Include="Dialogs\OptionsBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OptionsBox.Designer.cs">
+      <DependentUpon>OptionsBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\QuestionBox.cs" />
+    <Compile Include="Dialogs\WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WizardForm.Designer.cs">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawing\Animation.cs" />
+    <Compile Include="Drawing\ColorUtil.cs" />
+    <Compile Include="Drawing\GdiPlusEx.cs" />
+    <Compile Include="Drawing\Glass.cs" />
+    <Compile Include="Events\ApplicationFailure.cs" />
+    <Compile Include="Events\DelayedAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Events\DelayedAction.Designer.cs">
+      <DependentUpon>DelayedAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\EventQueue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Events\MenuLoop.cs" />
+    <Compile Include="Factories\ContextMenuFactory.cs" />
+    <Compile Include="Factories\ControlFactory.cs" />
+    <Compile Include="Factories\IconBuilder.cs" />
+    <Compile Include="Factories\ImageListBuilder.cs" />
+    <Compile Include="Factories\MenuStripFactory.cs" />
+    <Compile Include="Factories\ToolStripFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32\BroadcastMessages.cs" />
+    <Compile Include="Win32\PerPixelAlphaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Win32\PopupWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\AnimationControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AnimationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProcessingControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProcessingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ToolbarAnimationControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToolbarAnimationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OptionsBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WizardForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events\DelayedAction.resx">
+      <DependentUpon>DelayedAction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Win32\PopupWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PopupWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BinaryComponents.Utility\BinaryComponents.Utility.csproj">
+      <Project>{D3B89D5E-2788-40C7-AD71-128C42216B9E}</Project>
+      <Name>BinaryComponents.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BinaryComponents.VectorGraphics\BinaryComponents.VectorGraphics.csproj">
+      <Project>{3A8E6317-DEEA-4D6E-8B8D-D4685BC3390B}</Project>
+      <Name>BinaryComponents.VectorGraphics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
