@@ -19,10 +19,25 @@ namespace ProductMan.Panes
         {
             InitializeComponent();
 
-            DataService.Instance.OnProductUpdate += new EventHandler<ProductUpdateEventArgs>(Instance_OnProductUpdate);
+            DataService.Instance.OnProductCreated += new EventHandler<ProductUpdateEventArgs>(Instance_OnProductCreated);
+            DataService.Instance.OnProductUpdated += new EventHandler<ProductUpdateEventArgs>(Instance_OnProductUpdated);
         }
 
-        private void Instance_OnProductUpdate(object sender, ProductUpdateEventArgs e)
+        public void RefreshGrid()
+        {
+            try
+            {
+                listControl1.RefreshItems();
+            }
+            catch { }
+        }
+
+        private void Instance_OnProductUpdated(object sender, ProductUpdateEventArgs e)
+        {
+            RefreshGrid();
+        }
+
+        private void Instance_OnProductCreated(object sender, ProductUpdateEventArgs e)
         {
             AddProduct(e.Product);
         }

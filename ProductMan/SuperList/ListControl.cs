@@ -583,6 +583,10 @@ namespace BinaryComponents.SuperList
 			}
 		}
 
+        public void RefreshItems()
+        {
+            UpdateListSection(true);
+        }
 
 		internal void UpdateListSection( bool lazyLayout )
 		{

@@ -13,7 +13,8 @@ namespace ProductMan
 {
     public class DataService
     {
-        public event EventHandler<ProductUpdateEventArgs> OnProductUpdate;
+        public event EventHandler<ProductUpdateEventArgs> OnProductCreated;
+        public event EventHandler<ProductUpdateEventArgs> OnProductUpdated;
 
         private static DataService instance = new DataService();
         private SqlConnection sqlConn;
@@ -370,9 +371,9 @@ namespace ProductMan
                             products[product.ProductID] = product;
                         else
                             AssignNewProduct(product);
-                        if (OnProductUpdate != null)
+                        if (OnProductCreated != null)
                         {
-                            OnProductUpdate(this, new ProductUpdateEventArgs(product));
+                            OnProductCreated(this, new ProductUpdateEventArgs(product));
                         }
                         return product;
                     }
@@ -401,6 +402,10 @@ namespace ProductMan
                             products[product.ProductID] = product;
                         else
                             AssignNewProduct(product);
+                        if (OnProductUpdated != null)
+                        {
+                            OnProductUpdated(this, new ProductUpdateEventArgs(product));
+                        }
                         return product;
                     }
                 }
