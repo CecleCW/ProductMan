@@ -203,7 +203,7 @@ namespace ProductMan.Panes
         private void InitGrid()
         {
             Column nameColumn = new Column("ProductPane.ProductName", ResourceHelper.Instance.GetString("ProductPane.ProductName"), 200, delegate(object item) { return ((ProductInfo)item).ProductName; });
-            Column remarkColumn = new Column("ProductPane.Remark", ResourceHelper.Instance.GetString("ProductPane.Remark"), 80, delegate(object item) { return ((ProductInfo)item).Remark; });
+            Column remarkColumn = new Column("ProductPane.Remark", ResourceHelper.Instance.GetString("ProductPane.Remark"), 120, delegate(object item) { return ((ProductInfo)item).Remark; });
             Column productionDateColumn = new Column("ProductPane.ProductionDate", ResourceHelper.Instance.GetString("ProductPane.ProductionDate"), 120, delegate(object item) { return ((ProductInfo)item).ProductionDate; });
             Column createDateColumn = new Column("ProductPane.CreateDate", ResourceHelper.Instance.GetString("ProductPane.CreateDate"), 120, delegate(object item) { return ((ProductInfo)item).CreateDate; });
             Column modifiedDateColumn = new Column("ProductPane.ModifiedDate", ResourceHelper.Instance.GetString("ProductPane.ModifiedDate"), 120, delegate(object item) { return ((ProductInfo)item).ModifiedDate; });
@@ -216,7 +216,7 @@ namespace ProductMan.Panes
             //Column styleColumn = new Column("ProductPane.Style", ResourceHelper.Instance.GetString("ProductPane.Style"), 80, delegate(object item) { return ((ProductInfo)item).StyleName; });
             Column colorColumn = new Column("ProductPane.Color", ResourceHelper.Instance.GetString("ProductPane.Color"), 80, delegate(object item) { return ((ProductInfo)item).Color; });
             Column specColumn = new Column("ProductPane.Spec", ResourceHelper.Instance.GetString("ProductPane.Spec"), 80, delegate(object item) { return ((ProductInfo)item).Specification; });
-            Column stockColumn = new Column("ProductPane.Stock", ResourceHelper.Instance.GetString("ProductPane.Stock"), 120, delegate(object item) { return ((ProductInfo)item).Stock.ToString("N0"); });
+            Column stockColumn = new Column("ProductPane.Stock", ResourceHelper.Instance.GetString("ProductPane.Stock"), 120, delegate(object item) { return ((ProductInfo)item).Stock; });
 
             productionDateColumn.GroupItemAccessor = new ColumnItemValueAccessor(GroupValueFromItem);
             productionDateColumn.GroupSortOrder = SortOrder.Descending;
